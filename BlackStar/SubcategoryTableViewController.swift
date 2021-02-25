@@ -12,22 +12,22 @@ class SubcategoryTableViewController: UITableViewController {
     var subcategory: [Subcategory]?
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let cell = sender as? UITableViewCell, let index = tableView.indexPath(for: cell) {
-            guard segue.identifier == "Second" else { return }
-            guard let vc = segue.destination as? CollectionViewController else { return }
-            if let subcategory = subcategory {
-                
-                
-               
-                
-                
-//                vc.id = subcategory[index.row].id.encode(to: SortOrder.integer(id))
-//                    subcategory[index.row].sortOrder.encode(to: SortOrder.integer(<#T##Int#>))
-            
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let cell = sender as? UITableViewCell, let index = tableView.indexPath(for: cell) {
+//            guard segue.identifier == "Second" else { return }
+//            guard let vc = segue.destination as? CollectionViewController else { return }
+//            if let subcategory = subcategory {
+//                
+//                
+//               
+//                
+//                
+////                vc.id = subcategory[index.row].id.encode(to: SortOrder.integer(id))
+////                    subcategory[index.row].sortOrder.encode(to: SortOrder.integer(<#T##Int#>))
+//            
+//            }
+//        }
+//    }
     
 
     // MARK: - Table view data source
