@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0F8BCA8FF085425AC329F01A /* Pods_BlackStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDFDB303F13BE642DEC1F76 /* Pods_BlackStar.framework */; };
+		B4806D9D25E7E3B9004A167C /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4806D9C25E7E3B9004A167C /* Persistance.swift */; };
+		B4806DA225E7FC71004A167C /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4806DA125E7FC71004A167C /* BasketViewController.swift */; };
+		B4806DA525E7FC92004A167C /* BasketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4806DA425E7FC92004A167C /* BasketViewCell.swift */; };
+		B4806DA825E899ED004A167C /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4806DA725E899ED004A167C /* MainTableViewCell.swift */; };
+		B4806DB025E89FE3004A167C /* SubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4806DAF25E89FE3004A167C /* SubcategoryTableViewCell.swift */; };
+		B4CF028D25E8CF79000AC0F4 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF028C25E8CF79000AC0F4 /* ProductViewCell.swift */; };
 		B4F678B325E72291008663D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F678B225E72291008663D0 /* AppDelegate.swift */; };
 		B4F678B525E72291008663D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F678B425E72291008663D0 /* SceneDelegate.swift */; };
 		B4F678BA25E72291008663D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F678B825E72291008663D0 /* Main.storyboard */; };
@@ -24,6 +30,12 @@
 /* Begin PBXFileReference section */
 		81E2C7C8644EAD5F2C801A90 /* Pods-BlackStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStar.release.xcconfig"; path = "Target Support Files/Pods-BlackStar/Pods-BlackStar.release.xcconfig"; sourceTree = "<group>"; };
 		A256E573EE1F87D69265AB72 /* Pods-BlackStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStar.debug.xcconfig"; path = "Target Support Files/Pods-BlackStar/Pods-BlackStar.debug.xcconfig"; sourceTree = "<group>"; };
+		B4806D9C25E7E3B9004A167C /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		B4806DA125E7FC71004A167C /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		B4806DA425E7FC92004A167C /* BasketViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewCell.swift; sourceTree = "<group>"; };
+		B4806DA725E899ED004A167C /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		B4806DAF25E89FE3004A167C /* SubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewCell.swift; sourceTree = "<group>"; };
+		B4CF028C25E8CF79000AC0F4 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 		B4F678AF25E72291008663D0 /* BlackStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F678B225E72291008663D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F678B425E72291008663D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +73,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B4806D9B25E7E391004A167C /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				B4806D9C25E7E3B9004A167C /* Persistance.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		B4F678A625E72291008663D0 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +102,7 @@
 		B4F678B125E72291008663D0 /* BlackStar */ = {
 			isa = PBXGroup;
 			children = (
+				B4806D9B25E7E391004A167C /* DataBase */,
 				B4F678D225E725F8008663D0 /* API */,
 				B4F678B225E72291008663D0 /* AppDelegate.swift */,
 				B4F678B425E72291008663D0 /* SceneDelegate.swift */,
@@ -89,10 +110,15 @@
 				B4F678BB25E72298008663D0 /* Assets.xcassets */,
 				B4F678C025E72298008663D0 /* Info.plist */,
 				B4F678D925E72BDE008663D0 /* MainTableViewController.swift */,
+				B4806DA725E899ED004A167C /* MainTableViewCell.swift */,
 				B4F678E025E734A2008663D0 /* SubcategoryTableViewController.swift */,
+				B4806DAF25E89FE3004A167C /* SubcategoryTableViewCell.swift */,
 				B4F678E725E73D8D008663D0 /* ProductViewController.swift */,
+				B4CF028C25E8CF79000AC0F4 /* ProductViewCell.swift */,
 				B4F678EA25E73E16008663D0 /* CollectionViewController.swift */,
 				B4F678F125E769B7008663D0 /* CollectionViewCell.swift */,
+				B4806DA125E7FC71004A167C /* BasketViewController.swift */,
+				B4806DA425E7FC92004A167C /* BasketViewCell.swift */,
 			);
 			path = BlackStar;
 			sourceTree = "<group>";
@@ -227,12 +253,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4806DB025E89FE3004A167C /* SubcategoryTableViewCell.swift in Sources */,
+				B4806DA825E899ED004A167C /* MainTableViewCell.swift in Sources */,
+				B4806DA525E7FC92004A167C /* BasketViewCell.swift in Sources */,
 				B4F678E125E734A2008663D0 /* SubcategoryTableViewController.swift in Sources */,
 				B4F678DD25E72C4E008663D0 /* Model.swift in Sources */,
 				B4F678F225E769B7008663D0 /* CollectionViewCell.swift in Sources */,
 				B4F678DA25E72BDE008663D0 /* MainTableViewController.swift in Sources */,
+				B4806D9D25E7E3B9004A167C /* Persistance.swift in Sources */,
+				B4CF028D25E8CF79000AC0F4 /* ProductViewCell.swift in Sources */,
 				B4F678E825E73D8D008663D0 /* ProductViewController.swift in Sources */,
 				B4F678EB25E73E16008663D0 /* CollectionViewController.swift in Sources */,
+				B4806DA225E7FC71004A167C /* BasketViewController.swift in Sources */,
 				B4F678B325E72291008663D0 /* AppDelegate.swift in Sources */,
 				B4F678B525E72291008663D0 /* SceneDelegate.swift in Sources */,
 				B4F678E525E73CBE008663D0 /* Product.swift in Sources */,

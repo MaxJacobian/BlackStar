@@ -24,8 +24,7 @@ class MainTableViewController: UITableViewController {
             guard let vc = segue.destination as? SubcategoryTableViewController else { return }
             
             vc.subcategory = category?.map{_,value in value.subcategories}[index.row]
-            
-            
+
         }
     }
     
@@ -45,9 +44,15 @@ class MainTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Category", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Category", for: indexPath) as! MainTableViewCell
+        cell.picture.layer.cornerRadius = 10
+    
         if let category = category {
-            cell.textLabel?.text = "\(category.map{_, value in value.name}[indexPath.row])"
+            
+      
+            cell.picture.downloadedFrom(link: "https://blackstarshop.ru/\(category.map{_, value in value.image}[indexPath.row])")
+            cell.labelText.text = "\(category.map{_, value in value.name}[indexPath.row])"
+
         }
         return cell
     }

@@ -63,6 +63,8 @@ class CollectionViewController: UICollectionViewController, ProductProtocol {
                     vc.price?.text = product.map{_, value in value.price}[index.row] + " " + "руб."
                     vc.descriptionLabel?.text = product.map{_, value in value.productDescription}[index.row]
                     vc.image?.downloadedFrom(link: "https://blackstarshop.ru/\(product.map({_,value in   value.productImages.first?.imageURL})[index.row] ?? "")")
+                    vc.size = product.map{_, value in (value.offers.first?.size ?? "")}
+                    vc.color = product.map{_,value in  value.colorName}
                 }
             }
         }

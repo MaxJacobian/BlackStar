@@ -44,8 +44,10 @@ class SubcategoryTableViewController: UITableViewController {
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Subcategory", for: indexPath)
-        cell.textLabel?.text = "\(subcategory?[indexPath.row].name ?? "")"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Subcategory", for: indexPath) as! SubcategoryTableViewCell
+        cell.picture.layer.cornerRadius = 10
+        cell.picture.downloadedFrom(link:"https://blackstarshop.ru/\(subcategory?[indexPath.row].iconImage ?? "")")
+        cell.label.text =  "\(subcategory?[indexPath.row].name ?? "")"
         return cell
     }
  
